@@ -12,11 +12,24 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
+    "eslint": "eslint",
+    "prettier": "prettier",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loki87by/gallery.git",
+    "bugs": {
+      "url": "https://github.com/loki87by/gallery/issues"
+    },
+    "homepage": "https://github.com/loki87by/gallery#readme"
+  },
+  "author": "Alexey Akulich",
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -34,5 +47,16 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "gh-pages": "^3.2.0",
+    "prettier": "2.3.0"
   }
 }

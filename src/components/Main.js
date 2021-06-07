@@ -2,17 +2,20 @@
 import React from 'react';
 import Card from './Card';
 import plus from '../images/plus.svg';
-import { albums, basicAlbums } from './consts';
+import { albums, basicAlbums } from '../utils/consts';
 
 function Main(props) {
   const [isShowInput, setShowInput] = React.useState(false);
+  const [isShowError, setShowError] = React.useState(false);
+  const [isShowUrlInput, setShowUrlInput] = React.useState(false);
   const [albumName, setAlbumName] = React.useState('');
+  const [photoUrl, setPhotoUrl] = React.useState('');
 
   const userAlbums = Object.keys(albums).filter(function (item) {
     return basicAlbums.indexOf(item) === -1;
   });
 
-  const isUserAlbum = userAlbums.find((item) => {
+  let isUserAlbum = userAlbums.some((item) => {
     return item === props.currentAlbumName;
   });
 
@@ -33,15 +36,49 @@ function Main(props) {
     setAlbumName(event.target.value);
   }
 
+  function handleChangeUrl(event) {
+    setPhotoUrl(event.target.value);
+  }
+
+  const urlValidation = (url) => {
+    const reg = /^(ftp|http|https):\/\/[^ "]+$/;
+    return reg.test(url);
+  };
+
   function addAlbum() {
     albums[albumName] = [];
     props.setСurrentAlbumName(albumName);
     setShowInput(false);
-    console.log(userAlbums);
+  }
+
+  function showAddForm() {
+    setShowUrlInput(true);
+  }
+
+  function refresh() {
+    props.setСurrentAlbum(albums.total);
+    setTimeout(() => {
+      props.setСurrentAlbum(albums[props.currentAlbumName]);
+    }, 1);
   }
 
   function addPhoto() {
-    // popup
+    if (urlValidation(photoUrl)) {
+      setShowError(false);
+      albums[props.currentAlbumName].push(photoUrl);
+      setShowUrlInput(false);
+    } else {
+      setShowError(true);
+    }
+    refresh();
+  }
+
+  function handleCardDelete(ind) {
+    const start = albums[props.currentAlbumName].slice(0, ind);
+    const end = albums[props.currentAlbumName].slice(ind + 1);
+    const newArr = [...start, ...end];
+    albums[props.currentAlbumName] = newArr;
+    refresh();
   }
 
   return (
@@ -90,14 +127,32 @@ function Main(props) {
               num={index}
               source={source}
               currentAlbum={props.currentAlbumName}
-              /* onCardClick={handleCardClick}
-              onCardLike={handleCardLike}
-              onCardDelete={handleCardDelete} */
+              isUserAlbum={isUserAlbum}
+              onCardDelete={handleCardDelete}
             />
           ))}
         {isUserAlbum ? (
           <div className="card">
-            <img src={plus} alt="add" onClick={addPhoto}></img>
+            {isShowUrlInput ? (
+              <>
+                <input
+                  type="url"
+                  id="url"
+                  onChange={handleChangeUrl}
+                  className="content__input"
+                  placeholder="input image url"
+                ></input>
+                <label htmlFor="url" className="content__label content__label_url">
+                  input image url
+                </label>
+                <button type="button" className="content__add-button" onClick={addPhoto}>
+                  Add
+                </button>
+                {isShowError && <span className="content__add-error">Bad url request. Try input any url</span>}
+              </>
+            ) : (
+              <img src={plus} alt="add" onClick={showAddForm}></img>
+            )}
           </div>
         ) : (
           ''

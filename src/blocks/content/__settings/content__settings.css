@@ -1,0 +1,10 @@
+.content__settings{
+  width: max-content;
+  height: 20%;
+  margin: 1vmax;
+  padding: 1vmin;
+  border-radius: 1vmax;
+  display: flex;
+  background: rgba(0, 0, 0, .5);
+  opacity: .8;
+}

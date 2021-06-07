@@ -1,0 +1,7 @@
+.content__background {
+  position: absolute;
+  z-index: 0;
+  height: 100vw;
+  opacity: 0.9;
+  object-fit: cover;
+}

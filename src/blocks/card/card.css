@@ -1,0 +1,23 @@
+@import url('./__image/card__image.css');
+@import url('./__delete/card__delete.css');
+@import url('./__bottom/card__bottom.css');
+@import url('./__title/card__title.css');
+@import url('./__like/card__like.css');
+@import url('./__like/_type/card__like_type_active.css');
+
+.card {
+  position: relative;
+  width: 30%;
+  height: 70%;
+  padding: 1vmin;
+  margin-bottom: 1vmax;
+  border-radius: 2vmin;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, .5);
+}
+
+.card:hover{
+  border: 1px solid yellow;
+  transform: scale(1.05);
+}

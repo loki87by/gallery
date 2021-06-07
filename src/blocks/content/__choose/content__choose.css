@@ -1,0 +1,8 @@
+.content__choose{
+  width: max-content;
+  margin: 1vmax;
+  padding: 1vmin;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}

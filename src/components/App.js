@@ -3,7 +3,7 @@ import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
 import '../index.css';
-import { total, albums } from './consts';
+import { total, albums } from '../utils/consts';
 
 function App() {
   const [background, setBackground] = React.useState('');
@@ -17,10 +17,13 @@ function App() {
     }
     setBackground(total[imageCounter]);
   }, [imageCounter]);
+
   const newValue = imageCounter + 1;
+
   setTimeout(() => {
     setImageCounter(newValue);
   }, 150000);
+
   React.useEffect(() => {
     if (currentAlbumName === 'All') {
       setСurrentAlbum(total);
@@ -28,6 +31,7 @@ function App() {
       setСurrentAlbum(albums[currentAlbumName]);
     }
   }, [currentAlbumName]);
+
   //*DOM
   return (
     <div className="root">

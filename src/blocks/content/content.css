@@ -1,0 +1,31 @@
+@import url('./__background/content__background.css');
+@import url('./__settings/content__settings.css');
+@import url('./__choose/content__choose.css');
+@import url('./__settings-title/content__settings-title.css');
+@import url('./__form/content__form.css');
+@import url('./__input/content__input.css');
+@import url('./__label/content__label.css');
+@import url('./__label/_url/content__label_url.css');
+@import url('./__submit/content__submit.css');
+@import url('./__container/content__container.css');
+@import url('./__add-button/content__add-button.css');
+@import url('./__add-error/content__add-error.css');
+
+.content {
+  position: relative;
+  width: 100%;
+  height: calc(92vh - 6vmax);
+  margin: auto;
+  overflow: hidden;
+}
+
+.content__input:placeholder-shown + .content__label {
+  opacity: 0;
+  transform: translateY(1rem);
+}
+.content__input:-webkit-autofill,
+.content__input:-webkit-autofill:hover,
+.content__input:-webkit-autofill:focus,
+.content__input:-webkit-autofill:active {
+  transition: background-color 9999s ease-in-out 0s;
+}

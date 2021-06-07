@@ -1,0 +1,12 @@
+.content__submit{
+  position: absolute;
+    width: 5vmax;
+    padding: 1px;
+    margin-top: 5vmin;
+    margin-left: calc(15vmax + 8px);
+    border: none;
+    color: #ffffff;
+    font-weight: 900;
+    text-shadow: 2px 2px 2px #000;
+    background: radial-gradient(ellipse at center, violet, blue, cyan);
+}

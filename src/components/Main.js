@@ -1,6 +1,7 @@
 /* eslint react/prop-types: 0 */
 import React from 'react';
 import Card from './Card';
+import Popup from './Popup';
 import plus from '../images/plus.svg';
 import { albums, basicAlbums } from '../utils/consts';
 
@@ -8,8 +9,13 @@ function Main(props) {
   const [isShowInput, setShowInput] = React.useState(false);
   const [isShowError, setShowError] = React.useState(false);
   const [isShowUrlInput, setShowUrlInput] = React.useState(false);
+  const [isShowCommentPopup, showCommentPopup] = React.useState(false);
+  const [isShowCardPopup, showCardPopup] = React.useState(false);
   const [albumName, setAlbumName] = React.useState('');
   const [photoUrl, setPhotoUrl] = React.useState('');
+  const [currentPhoto, setCurrentPhoto] = React.useState({});
+  const [currentImage, setCurrentImage] = React.useState('');
+  const [commentText, setCommentText] = React.useState('');
 
   const userAlbums = Object.keys(albums).filter(function (item) {
     return basicAlbums.indexOf(item) === -1;
@@ -81,6 +87,17 @@ function Main(props) {
     refresh();
   }
 
+  function closePopup() {
+    showCommentPopup(false);
+    showCardPopup(false);
+    setCommentText('');
+    setCurrentPhoto({});
+    setCurrentImage('');
+  }
+
+  /* function openCardPopup(event) {
+  } */
+
   return (
     <main className="content">
       <img src={props.background} alt="background" className="content__background" />
@@ -98,23 +115,21 @@ function Main(props) {
           </select>
         </div>
         {isShowInput ? (
-          <>
-            <form className="content__form">
-              <input
-                type="text"
-                id="name"
-                onChange={handleChangeName}
-                className="content__input"
-                placeholder="input name"
-              ></input>
-              <label htmlFor="name" className="content__label">
-                input name
-              </label>
-              <button type="button" onClick={addAlbum} className="content__submit">
-                Save
-              </button>
-            </form>
-          </>
+          <form className="content__form">
+            <input
+              type="text"
+              id="name"
+              onChange={handleChangeName}
+              className="content__input"
+              placeholder="input name"
+            ></input>
+            <label htmlFor="name" className="content__label">
+              input name
+            </label>
+            <button type="button" onClick={addAlbum} className="content__submit">
+              Save
+            </button>
+          </form>
         ) : (
           ''
         )}
@@ -123,18 +138,25 @@ function Main(props) {
         {props.currentAlbum &&
           props.currentAlbum.map((source, index) => (
             <Card
+              // onCardClick={openCardPopup}
               key={index}
               num={index}
               source={source}
               currentAlbum={props.currentAlbumName}
               isUserAlbum={isUserAlbum}
               onCardDelete={handleCardDelete}
+              showCommentPopup={showCommentPopup}
+              currentPhoto={currentPhoto}
+              setCurrentPhoto={setCurrentPhoto}
+              setCommentText={setCommentText}
+              setCurrentImage={setCurrentImage}
+              showCardPopup={showCardPopup}
             />
           ))}
         {isUserAlbum ? (
           <div className="card">
             {isShowUrlInput ? (
-              <>
+              <form>
                 <input
                   type="url"
                   id="url"
@@ -149,7 +171,7 @@ function Main(props) {
                   Add
                 </button>
                 {isShowError && <span className="content__add-error">Bad url request. Try input any url</span>}
-              </>
+              </form>
             ) : (
               <img src={plus} alt="add" onClick={showAddForm}></img>
             )}
@@ -158,6 +180,36 @@ function Main(props) {
           ''
         )}
       </div>
+      {isShowCommentPopup && (
+        <Popup
+          isShowCommentPopup={isShowCommentPopup}
+          closePopup={closePopup}
+          currentPhoto={currentPhoto}
+          showCommentPopup={showCommentPopup}
+          setCommentText={setCommentText}
+          commentText={commentText}
+          // isShowCardPopup={isShowCardPopup}
+          // showCardPopup={showCardPopup}
+          // currentImage={currentImage}
+          /* setCurrentPhoto={setCurrentPhoto}
+          setCurrentImage={setCurrentImage} */
+        />
+      )}
+      {isShowCardPopup && (
+        <Popup
+          isShowCardPopup={isShowCardPopup}
+          closePopup={closePopup}
+          currentPhoto={currentPhoto}
+          // isShowCommentPopup={isShowCommentPopup}
+          // showCommentPopup={showCommentPopup}
+          // setCommentText={setCommentText}
+          // commentText={commentText}
+          currentImage={currentImage}
+          /* setCurrentPhoto={setCurrentPhoto}
+          showCardPopup={showCardPopup}
+          setCurrentImage={setCurrentImage} */
+        />
+      )}
     </main>
   );
 }

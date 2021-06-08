@@ -1,0 +1,10 @@
+.popup__text {
+  height: 50vh;
+  width: 50vw;
+  margin: 1vmax;
+  border: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  color: #000;
+}

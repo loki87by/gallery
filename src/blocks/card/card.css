@@ -2,6 +2,7 @@
 @import url('./__delete/card__delete.css');
 @import url('./__bottom/card__bottom.css');
 @import url('./__title/card__title.css');
+@import url('./__add-comment/card__add-comment.css');
 @import url('./__like/card__like.css');
 @import url('./__like/_type/card__like_type_active.css');
 

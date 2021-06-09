@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.51a24955.chunk.css",
-    "main.js": "/static/js/main.5f8283c3.chunk.js",
-    "main.js.map": "/static/js/main.5f8283c3.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.98625ce0.js",
-    "runtime-main.js.map": "/static/js/runtime-main.98625ce0.js.map",
-    "static/js/2.7776367f.chunk.js": "/static/js/2.7776367f.chunk.js",
-    "static/js/2.7776367f.chunk.js.map": "/static/js/2.7776367f.chunk.js.map",
-    "static/js/3.b4b147c9.chunk.js": "/static/js/3.b4b147c9.chunk.js",
-    "static/js/3.b4b147c9.chunk.js.map": "/static/js/3.b4b147c9.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.51a24955.chunk.css.map": "/static/css/main.51a24955.chunk.css.map",
-    "static/js/2.7776367f.chunk.js.LICENSE.txt": "/static/js/2.7776367f.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/static/media/plus.bed8c136.svg",
-    "static/media/card.css": "/static/media/trash.2af49b82.svg",
-    "static/media/paper.067aaf5e.svg": "/static/media/paper.067aaf5e.svg"
+    "main.css": "/gallery/static/css/main.cd6eefac.chunk.css",
+    "main.js": "/gallery/static/js/main.5f8283c3.chunk.js",
+    "main.js.map": "/gallery/static/js/main.5f8283c3.chunk.js.map",
+    "runtime-main.js": "/gallery/static/js/runtime-main.8d6fc80b.js",
+    "runtime-main.js.map": "/gallery/static/js/runtime-main.8d6fc80b.js.map",
+    "static/js/2.7776367f.chunk.js": "/gallery/static/js/2.7776367f.chunk.js",
+    "static/js/2.7776367f.chunk.js.map": "/gallery/static/js/2.7776367f.chunk.js.map",
+    "static/js/3.b4b147c9.chunk.js": "/gallery/static/js/3.b4b147c9.chunk.js",
+    "static/js/3.b4b147c9.chunk.js.map": "/gallery/static/js/3.b4b147c9.chunk.js.map",
+    "index.html": "/gallery/index.html",
+    "static/css/main.cd6eefac.chunk.css.map": "/gallery/static/css/main.cd6eefac.chunk.css.map",
+    "static/js/2.7776367f.chunk.js.LICENSE.txt": "/gallery/static/js/2.7776367f.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/gallery/static/media/plus.bed8c136.svg",
+    "static/media/card.css": "/gallery/static/media/trash.2af49b82.svg",
+    "static/media/paper.067aaf5e.svg": "/gallery/static/media/paper.067aaf5e.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.98625ce0.js",
+    "static/js/runtime-main.8d6fc80b.js",
     "static/js/2.7776367f.chunk.js",
-    "static/css/main.51a24955.chunk.css",
+    "static/css/main.cd6eefac.chunk.css",
     "static/js/main.5f8283c3.chunk.js"
   ]
 }

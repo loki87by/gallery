@@ -1,7 +1,11 @@
 /* eslint react/prop-types: 0 */
 import React from 'react';
+import Filter from 'react-css-filter';
+import Filters from './Filters';
 
 function Popup(props) {
+  const [filter, setFilter] = React.useState('');
+
   function handleChangeComment(event) {
     props.setCommentText(event.target.value);
   }
@@ -15,11 +19,11 @@ function Popup(props) {
     Object.setPrototypeOf(card, proto);
     card.prototype.comment = props.commentText;
     props.showCommentPopup(false);
-    console.log(card.prototype.comment);
     props.setCommentText('');
   }
 
   let comment;
+
   if (props.currentPhoto.prototype) {
     comment = props.currentPhoto.prototype.comment;
   }
@@ -27,12 +31,7 @@ function Popup(props) {
   return (
     <div className="popup">
       <div className={`popup__container ${props.isShowCardPopup && 'popup__image-container'}`}>
-        <button
-          className={`popup__close ${props.isShowCardPopup && 'popup__close_image'}`}
-          type="reset"
-          aria-label="Закрыть"
-          onClick={props.closePopup}
-        ></button>
+        <button className="popup__close" type="reset" aria-label="Закрыть" onClick={props.closePopup}></button>
         {props.isShowCommentPopup && (
           <>
             <textarea
@@ -49,13 +48,16 @@ function Popup(props) {
         )}
         {props.isShowCardPopup && (
           <>
-            <figure>
-              <img src={props.currentImage.src} className="popup__image" alt={props.currentImage.alt} />
+            <figure style={{ margin: '1vmax' }}>
+              <Filter effects={filter}>
+                <img src={props.currentImage.src} className="popup__image" alt={props.currentImage.alt} />
+              </Filter>
               <figcaption className="popup__image-title">
                 {props.currentImage.alt}
                 {comment && <span className="popup__text-error">{comment}</span>}
               </figcaption>
             </figure>
+            <Filters source={props.currentImage.src} setImgFilter={setFilter} />
           </>
         )}
       </div>

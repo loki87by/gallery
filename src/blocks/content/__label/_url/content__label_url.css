@@ -1,5 +1,6 @@
 .content__label_url {
-  top: 0;
+  top: 1vmin;
+  left: 1vmin;
   margin-top: 0;
   font-size: 1.5rem;
   font-weight: 300;

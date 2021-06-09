@@ -1,0 +1,16 @@
+.filter__output {
+  position: absolute;
+  width: 4vmin;
+  height: 4vmin;
+  right: -8vmin;
+  top: 1vmin;
+  background-color: #454c53;
+  border: 1px solid #454c53;
+  text-align: center;
+  padding: 1vmin;
+  line-height: 1.5rem;
+  border-radius: 25%;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}

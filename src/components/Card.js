@@ -5,7 +5,6 @@ import '../blocks/card/card.css';
 
 function Card(props) {
   function handleClick(event) {
-    // props.onCardClick(event);
     props.setCurrentImage(event.target);
     props.setCurrentPhoto(event.target.offsetParent);
     props.showCardPopup(true);

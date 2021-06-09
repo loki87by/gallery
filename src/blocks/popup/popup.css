@@ -1,7 +1,6 @@
 @import url('./__container/popup__container.css');
 @import url('./__image-container/popup__image-container.css');
 @import url('./__close/popup__close.css');
-@import url('./__close/_image/popup__close_image.css');
 @import url('./__title/popup__title.css');
 @import url('./__text/popup__text.css');
 @import url('./__text-error/popup__text-error.css');

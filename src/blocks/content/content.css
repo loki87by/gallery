@@ -21,11 +21,14 @@
 
 .content__input:placeholder-shown + .content__label {
   opacity: 0;
+  -webkit-transform: translateY(1rem);
+  -ms-transform: translateY(1rem);
   transform: translateY(1rem);
 }
 .content__input:-webkit-autofill,
 .content__input:-webkit-autofill:hover,
 .content__input:-webkit-autofill:focus,
 .content__input:-webkit-autofill:active {
+  -webkit-transition: background-color 9999s ease-in-out 0s;
   transition: background-color 9999s ease-in-out 0s;
 }

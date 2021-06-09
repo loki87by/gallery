@@ -3,7 +3,7 @@ import React from 'react';
 import Card from './Card';
 import Popup from './Popup';
 import plus from '../images/plus.svg';
-import { albums, basicAlbums } from '../utils/consts';
+import { albums, basicAlbums, urlRegex } from '../utils/consts';
 
 function Main(props) {
   const [isShowInput, setShowInput] = React.useState(false);
@@ -47,8 +47,7 @@ function Main(props) {
   }
 
   const urlValidation = (url) => {
-    const reg = /^(ftp|http|https):\/\/[^ "]+$/;
-    return reg.test(url);
+    return urlRegex.test(url);
   };
 
   function addAlbum() {
@@ -61,7 +60,7 @@ function Main(props) {
     setShowUrlInput(true);
   }
 
-  function refresh() {
+  function rerender() {
     props.setСurrentAlbum(albums.total);
     setTimeout(() => {
       props.setСurrentAlbum(albums[props.currentAlbumName]);
@@ -76,15 +75,15 @@ function Main(props) {
     } else {
       setShowError(true);
     }
-    refresh();
+    rerender();
   }
 
   function handleCardDelete(ind) {
-    const start = albums[props.currentAlbumName].slice(0, ind);
-    const end = albums[props.currentAlbumName].slice(ind + 1);
-    const newArr = [...start, ...end];
-    albums[props.currentAlbumName] = newArr;
-    refresh();
+    const albumsListStart = albums[props.currentAlbumName].slice(0, ind);
+    const albumsListEnd = albums[props.currentAlbumName].slice(ind + 1);
+    const newAlbumsList = [...albumsListStart, ...albumsListEnd];
+    albums[props.currentAlbumName] = newAlbumsList;
+    rerender();
   }
 
   function closePopup() {
@@ -94,9 +93,6 @@ function Main(props) {
     setCurrentPhoto({});
     setCurrentImage('');
   }
-
-  /* function openCardPopup(event) {
-  } */
 
   return (
     <main className="content">
@@ -138,7 +134,6 @@ function Main(props) {
         {props.currentAlbum &&
           props.currentAlbum.map((source, index) => (
             <Card
-              // onCardClick={openCardPopup}
               key={index}
               num={index}
               source={source}
@@ -183,31 +178,19 @@ function Main(props) {
       {isShowCommentPopup && (
         <Popup
           isShowCommentPopup={isShowCommentPopup}
-          closePopup={closePopup}
           currentPhoto={currentPhoto}
+          commentText={commentText}
+          closePopup={closePopup}
           showCommentPopup={showCommentPopup}
           setCommentText={setCommentText}
-          commentText={commentText}
-          // isShowCardPopup={isShowCardPopup}
-          // showCardPopup={showCardPopup}
-          // currentImage={currentImage}
-          /* setCurrentPhoto={setCurrentPhoto}
-          setCurrentImage={setCurrentImage} */
         />
       )}
       {isShowCardPopup && (
         <Popup
           isShowCardPopup={isShowCardPopup}
-          closePopup={closePopup}
           currentPhoto={currentPhoto}
-          // isShowCommentPopup={isShowCommentPopup}
-          // showCommentPopup={showCommentPopup}
-          // setCommentText={setCommentText}
-          // commentText={commentText}
           currentImage={currentImage}
-          /* setCurrentPhoto={setCurrentPhoto}
-          showCardPopup={showCardPopup}
-          setCurrentImage={setCurrentImage} */
+          closePopup={closePopup}
         />
       )}
     </main>

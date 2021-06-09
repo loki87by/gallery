@@ -1,18 +1,9 @@
 .popup__button {
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   margin: 1vmax;
-  cursor: pointer;
   font-style: normal;
   font-weight: normal;
   font-size: 1.5rem;
-  border: none;
-  color: #fff;
-  font-weight: 900;
-  text-shadow: 2px 2px 2px #000;
-  background: radial-gradient(ellipse at center, violet, blue, cyan);
-  border-radius: 2px;
-}
-
-.popup__button:hover {
-  background: radial-gradient(ellipse at center, green, yellow, red);
 }

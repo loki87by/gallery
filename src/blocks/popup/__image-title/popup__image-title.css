@@ -1,7 +1,21 @@
 .popup__image-title {
   margin: 0;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 1rem;
-    color: #000;
+  display: -webkit-box;
+  display: box;
+  max-width: 75vw;
+  max-height: 10vh;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  -ms-line-clamp: 3;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 1rem;
+  color: #000;
 }

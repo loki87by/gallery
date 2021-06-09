@@ -1,7 +1,7 @@
 .popup__text-error {
   margin: 0 1vmin;
-    max-height: 12px;
-    font-size: 1rem;
-    font-weight: 500;
-    word-wrap: break-word;
+  max-height: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  word-wrap: break-word;
 }

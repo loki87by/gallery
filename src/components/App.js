@@ -2,8 +2,8 @@
 import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
-import '../index.css';
 import { total, albums } from '../utils/consts';
+import '../index.css';
 
 function App() {
   const [background, setBackground] = React.useState('');
@@ -39,10 +39,10 @@ function App() {
         <Header />
         <Main
           currentAlbum={currentAlbum}
-          setСurrentAlbum={setСurrentAlbum}
           currentAlbumName={currentAlbumName}
-          setСurrentAlbumName={setСurrentAlbumName}
           background={background}
+          setСurrentAlbum={setСurrentAlbum}
+          setСurrentAlbumName={setСurrentAlbumName}
         />
         <Footer />
       </div>

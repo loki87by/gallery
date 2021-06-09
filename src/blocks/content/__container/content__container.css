@@ -1,11 +1,15 @@
-.content__container{
+.content__container {
   margin: 1vmax;
   padding: 1vmax;
   width: calc(100% - 4vmax);
   height: calc(80% - 6vmax);
   border-radius: 1vmax;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   background: #000;
   overflow-y: scroll;

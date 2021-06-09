@@ -3,6 +3,6 @@
   max-width: 75vw;
   grid-area: image;
   -o-object-fit: cover;
-    object-fit: cover;
+  object-fit: cover;
   margin: 0;
 }

@@ -1,3 +1,4 @@
-.card__add-comment{
+.card__add-comment {
   width: 3.5vmin;
+  cursor: pointer;
 }

@@ -1,0 +1,8 @@
+.filters__btn {
+  position: absolute;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  bottom: -5vmin;
+  font-size: 1.1rem;
+}

@@ -5,5 +5,17 @@
   height: 5vh;
   margin: auto;
   padding: 1.5vmax;
-  background: linear-gradient(to left, orange , yellow, green, cyan, blue, violet);
+  background: -webkit-gradient(
+    linear,
+    right top,
+    left top,
+    from(orange),
+    color-stop(yellow),
+    color-stop(green),
+    color-stop(cyan),
+    color-stop(blue),
+    to(violet)
+  );
+  background: -o-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
+  background: linear-gradient(to left, orange, yellow, green, cyan, blue, violet);
 }

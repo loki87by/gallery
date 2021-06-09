@@ -4,10 +4,7 @@
   padding: 0;
   cursor: pointer;
   border: none;
-  background-color: #fff;
-  background-image: url('../../../images/like.svg');
-  background-repeat: no-repeat;
-  background-position: center;
+  background: url('../../../images/like.svg'), center, no-repeat, #fff !important;
 }
 
 .card__like:hover {

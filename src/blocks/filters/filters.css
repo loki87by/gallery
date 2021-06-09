@@ -1,0 +1,27 @@
+@import url('./__label/filter__label.css');
+@import url('./__output/filter__output.css');
+@import url('./__range/filter__range.css');
+@import url('./__btn/filters__btn.css');
+@import url('./__btn/_download/filters__btn_download.css');
+
+.filters {
+  position: relative;
+  margin-bottom: 5vmin;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.filter__label:hover .filter__output {
+  color: #a2abb3;
+}
+.filter__label:active .filter__output {
+  color: #cbd5de;
+}
+.filter__label:hover input[type='range']::-webkit-slider-thumb {
+  background-color: #00c9b7;
+}

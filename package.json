@@ -9,6 +9,7 @@
     "eslint-plugin-react-app": "^6.2.2",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
+    "react-css-filter": "^1.0.4",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.2"

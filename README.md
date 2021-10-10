@@ -11,4 +11,4 @@
 * Относительные величины
 * и многое другое
 
-[**deploy**](https://loki87by.github.io/gallery)
+### [**deploy**](https://loki87by.github.io/gallery)

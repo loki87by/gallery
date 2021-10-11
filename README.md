@@ -12,3 +12,5 @@
 * и многое другое
 
 ### [**deploy**](https://loki87by.github.io/gallery)
+
+### [Упрощенная копия этого проекта на AngularJs](https://github.com/loki87by/gallery-angular).

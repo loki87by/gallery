@@ -1,13 +1,14 @@
 {
+  "homepage": "https://loki87by.github.io/gallery/",
   "name": "gallery",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.13.0",
+    "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "eslint-plugin-react-app": "^6.2.2",
-    "prop-types": "^15.7.2",
+    "prop-types": "^15.8.0",
     "react": "^17.0.2",
     "react-css-filter": "^1.0.4",
     "react-dom": "^17.0.2",
@@ -52,15 +53,15 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^7.27.0",
+    "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-prettier": "^3.4.0",
-    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^3.4.1",
+    "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^1.7.0",
-    "gh-pages": "^3.2.0",
+    "gh-pages": "^3.2.3",
     "prettier": "2.3.0",
     "prettier-eslint": "^12.0.0"
   }

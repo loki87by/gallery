@@ -29,3 +29,9 @@
   -ms-transform: scale(1.05);
   transform: scale(1.05);
 }
+
+.card > form {
+  min-width: min-content;
+  max-width: 25vw;
+  margin: auto;
+}

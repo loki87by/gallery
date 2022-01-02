@@ -2,13 +2,13 @@
   position: absolute;
   width: 4vmin;
   height: 4vmin;
-  right: -8vmin;
+  left: 111%;
   top: 1vmin;
+  padding: .5vmin;
   background-color: #454c53;
   border: 1px solid #454c53;
   text-align: center;
-  padding: 1vmin;
-  line-height: 1.5rem;
+  line-height: 1.5;
   border-radius: 25%;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;

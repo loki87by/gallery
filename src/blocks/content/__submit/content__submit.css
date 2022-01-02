@@ -1,7 +1,7 @@
 .content__submit {
   position: absolute;
-  width: 5vmax;
+  width: 6vmax;
   padding: 1px;
-  margin-top: 5vmin;
-  margin-left: calc(15vmax + 8px);
+  margin-top: calc(1vmax + 1vmin + 1.725rem + 1.9vh + 2px);
+  margin-left: calc(14vmax + 8px);
 }

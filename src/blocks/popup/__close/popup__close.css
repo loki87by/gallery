@@ -1,10 +1,10 @@
 .popup__close {
   position: absolute;
-  width: 40px;
-  height: 40px;
+  width: 3.5vw;
+  height: 3.5vw;
   padding: 0;
-  right: -34px;
-  top: -34px;
+  right: -3vw;
+  top: -3vw;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);

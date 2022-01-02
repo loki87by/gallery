@@ -17,10 +17,10 @@
 .filter__range::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   background-color: #313940;
-  border: 3px solid #a2abb3;
+  border: 2px solid #a2abb3;
   border-radius: 50%;
   cursor: pointer;
   -webkit-transition: 0.3s;

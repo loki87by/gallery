@@ -1,5 +1,5 @@
 const albums = {
-  day: [],
+  afternoon: [],
   evening: [],
   night: [],
   morning: [],

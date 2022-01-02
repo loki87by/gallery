@@ -1,9 +1,9 @@
 .filter__label {
   position: relative;
-  margin: 1.5vmin;
+  margin: 1vmin;
   margin-right: 10vmin;
   color: #a2abb3;
-  font-size: 1rem;
+  font-size: 1.5vw;
 }
 .filter__label:hover {
   color: #cbd5de;

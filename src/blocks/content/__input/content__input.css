@@ -1,6 +1,6 @@
 .content__input {
   width: 20vmax;
-  margin-top: 5vmin;
+  margin-top: calc(1vmax + 1vmin + 1.725rem + 1.9vh);
   font-size: 1rem;
   color: #000;
   background: #fff;

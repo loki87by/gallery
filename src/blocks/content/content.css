@@ -2,6 +2,7 @@
 @import url('./__settings/content__settings.css');
 @import url('./__choose/content__choose.css');
 @import url('./__settings-title/content__settings-title.css');
+@import url('./__settings-select/content__settings-select.css');
 @import url('./__form/content__form.css');
 @import url('./__input/content__input.css');
 @import url('./__label/content__label.css');
